@@ -1,4 +1,4 @@
-# deadman
+# Deadman
 
 A dead-man switch and uptime checker that runs as one Cloudflare Worker, outside the system it
 watches.
@@ -78,7 +78,7 @@ in as a dependency of this repository.
 1. Clone the repository and install.
 
    ```sh
-   git clone <this repository> switch && cd switch
+   git clone https://github.com/veloccy/deadman && cd deadman
    bun install
    bun run test
    ```
