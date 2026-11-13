@@ -1,0 +1,4 @@
+# Copy to .dev.vars for `cf dev`. Every value here is refused until you replace it.
+WEBHOOK_URL=REPLACE
+ALERT_EMAIL_TO=REPLACE
+PING_SECRET_CLUSTER=REPLACE
