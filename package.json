@@ -15,5 +15,18 @@
     "typescript": "7.0.2",
     "vite": "8.2.2",
     "vitest": "4.1.11"
+  },
+  "cloudflare": {
+    "bindings": {
+      "WEBHOOK_URL": {
+        "description": "Where each alert is POSTed as JSON, for example a [Vigil](https://github.com/veloccy/vigil) webhook. Must be https."
+      },
+      "ALERT_EMAIL_TO": {
+        "description": "The address alert emails go to."
+      },
+      "PING_SECRET_CLUSTER": {
+        "description": "What the `cluster` heartbeat source sends as its bearer token. At least 32 characters: `openssl rand -hex 32`."
+      }
+    }
   }
 }

@@ -5,7 +5,10 @@ import { bindings, defineConfig, exports, triggers } from "cf/config";
 // This file is an example to edit: the heartbeat sources, the uptime targets and the email sender
 // below are placeholders. The Worker refuses to run while a URL or an address still points at
 // example.com, and until every secret at the bottom is set.
-const name = "deadman";
+//
+// A deploy from the Deploy to Cloudflare button runs on Workers Builds, which names the Worker in
+// its setup form and passes that name here.
+const name = process.env.WRANGLER_CI_OVERRIDE_NAME ?? "deadman";
 
 export default defineConfig({
   // Set your own here: `accountId: "<your Cloudflare account>"`, and, to serve the Worker from
