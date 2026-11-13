@@ -1,0 +1,10 @@
+// Read only by the Deploy to Cloudflare button, whose setup form needs a Wrangler file to know
+// what this Worker is. Nothing is deployed from here: the Worker is built and deployed from
+// cloudflare.config.ts (`bun run deploy`), and every setting lives there.
+{
+  "name": "deadman",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "durable_objects": { "bindings": [{ "name": "MONITOR", "class_name": "Monitor" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Monitor"] }]
+}
